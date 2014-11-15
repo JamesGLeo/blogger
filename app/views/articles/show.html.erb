@@ -1,3 +1,6 @@
 <h1> <%= @article.header %> </h1>
 <p> <%= @article.article %> </p>
+<h6> <%= link_to "Delete Entry", article_path(@article), method: :delete, data: {confirm: "Are you sure you want to delete this?"} %></h6>
+
 <%= link_to "<< Back to Blog Entries", articles_path %>
+
