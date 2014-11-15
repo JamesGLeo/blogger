@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DataSourceManagerImpl" format="xml" hash="2001259753">
+    <data-source source="LOCAL" name="Rails blogger: development" uuid="63784bf6-a966-42bb-9f5e-fab3740c96fc">
+      <driver-ref>postgresql</driver-ref>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql:blogger_development</jdbc-url>
+      <libraries />
+    </data-source>
+    <data-source source="LOCAL" name="Rails blogger: test" uuid="5d34c9a4-7cac-42bb-b151-071faa780f71">
+      <driver-ref>postgresql</driver-ref>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql:blogger_test</jdbc-url>
+      <libraries />
+    </data-source>
+    <data-source source="LOCAL" name="Rails blogger: production" uuid="404423ff-23b9-4bde-a84d-7e58649c6c14">
+      <driver-ref>postgresql</driver-ref>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql:blogger_production</jdbc-url>
+      <user-name>blogger</user-name>
+      <user-password>df96df8fdf97df8adfefdfe4dffcdff1df8ddfe8dfe6dfe5dfeddfeddfefdff8dff5dfeedfebdffedfebdfe8dfebdff9dfefdff5dffadfebdff9dff9dffddfe5dff8dfeedf8ddff7df8adf8fdf94</user-password>
+      <libraries />
+    </data-source>
+  </component>
+</project>
+
