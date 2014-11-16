@@ -2,6 +2,10 @@
 
 <p> <%= @article.article %> </p>
 
+<% if @article.image.exists? %>
+    <p><%= image_tag @article.image.url(:medium) %></p>
+<% end %>
+
 <p>
   Tags:
   <% @article.tags.each do |tag| %>
