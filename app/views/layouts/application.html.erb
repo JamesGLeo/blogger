@@ -4,6 +4,7 @@
   <title>Blogger</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag :defaults %>
   <%= csrf_meta_tags %>
 </head>
 <body>
@@ -12,6 +13,11 @@
 
     <div class="container">
       <div id="content">
+        <div class="navbar">
+            <span><%= link_to "Home", root_path %></span>
+
+            <span><%= link_to "About us.", authors_path %></span>
+        </div>
 
         <%= yield %>
 
@@ -23,7 +29,7 @@
             <%= "Logged in as #{current_user.email}" %>
             <%= link_to "(logout)", logout_path %>
           <% else %>
-            <%= link_to "(login)", login_path %>
+            <%= link_to "(login)", login_path %>+
           <% end %>
         </h6>
 

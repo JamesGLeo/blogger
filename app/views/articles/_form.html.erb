@@ -6,6 +6,10 @@
     </ul>
 
     <p>
+      <%= f.submit %>
+    </p>
+
+    <p>
         <%= f.label :header, "Title" %>
         <%= f.text_field :header %>
     </p>
@@ -13,11 +17,6 @@
     <p>
         <%= f.label :article %> <br/>
         <%= f.text_area :article %>
-    </p>
-
-    <p>
-        <%= f.label :tag_list %><br/>
-        <%= f.text_field :tag_list %>
     </p>
 
     <p>
@@ -30,8 +29,67 @@
     </p>
 
     <p>
-        <%= f.submit %>
+      <% if !@article.id %>
+        <%= f.label :tag_list %><br/>
+        <%= f.text_field :tag_list %>
+      <% end %>
+
     </p>
 <% end %>
 
+<% if @article.id %>
+    <form id="tag" action="#">
+      <input type="text" name="tag"/>
+      <input type="submit" value="Set New Tags"/>
+    </form>
 
+    <% @article.tags.each do |tag| %>
+        <span class='old_tag clearfix'><%= tag.tag %></span>
+    <% end %>
+<% end %>
+
+<span class="tag_list">
+
+</span>
+
+
+<script>
+
+    var $span = $('span.old_tag');
+
+    var $button = $("<button>[X]</button>");
+    $span.prepend($button);
+
+    var $tag = $('#tag'),
+        $input = $('input[name="tag"]');
+
+    var tags = new TagList();
+    var tagListView = new TagListView($('span.tag_list'), tags);
+
+//    $tag.on("submit", function(e) {
+//        e.preventDefault();
+//        var tag = new Tag($input.val());
+//
+//        $.ajax({
+//            method:'POST',
+//            url: '/articles',
+//            dataType: 'JSON',
+//            data: {tag_list: tag }.to_json,
+//            success: tags.add(tag)
+//        });
+//    });
+//
+//    $button.on('click', function(e) {
+//        e.preventDefault;
+//
+//        $.ajax({
+//            method:'GET',
+//            url: '/api/articles/tags',
+//            dataType: 'JSON',
+//            data: {tag_list: tag }.to_json,
+//            success: function(data) {
+//                console.log(data.text + "destroyed");
+//            }
+//        });
+//    });
+</script>
